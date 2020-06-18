@@ -30,6 +30,6 @@ export default async function (
   const envList = (rawEnv as string).split('\n');
 
   /**
-   * TODO: make write option depends on the format
+   * TODO: make .env write option depends on the format
    */
 }
