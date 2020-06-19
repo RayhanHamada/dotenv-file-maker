@@ -56,7 +56,7 @@ async function makeEnvInJson(outputPath, envName, envListPath = './envList') {
     const envList = rawEnv.split('\n');
     const envObject = envList.reduce((prev, curr) => ({
         ...prev,
-        [curr]: process.env[curr],
+        [curr]: JSON.stringify(process.env[curr]),
     }), {});
     const toWrite = JSON.stringify({
         [envName]: envObject,

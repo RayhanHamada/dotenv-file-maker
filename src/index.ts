@@ -68,7 +68,7 @@ export async function makeEnvInJson(
   const envObject = envList.reduce<Record<string, string>>(
     (prev, curr) => ({
       ...prev,
-      [curr]: process.env[curr] as string,
+      [curr]: JSON.stringify(process.env[curr] as string),
     }),
     {}
   );
